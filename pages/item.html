@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Sen:wght@400..800&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+        <a class="navbar-brand ms-4" href="#" style="font-family: 'Sen', sans-serif; font-size: 2em; font-weight: bold">POS System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+            <!-- Center Links -->
+            <ul class="navbar-nav mx-auto justify-content-center">
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-5" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-5" href="#">Orders</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-5" href="#">Customers</a>
+                </li>
+                <li class="nav-item mx-4">
+                    <a class="nav-link fs-5" href="#">Items</a>
+                </li>
+            </ul>
+
+            <!-- Right side (Settings icon and buttons) -->
+            <div class="d-flex align-items-center">
+                <a href="#" class="me-4"><i class="fas fa-cog fa-lg" style="color: black"></i></a>
+                <a href="#" class="btn btn-outline-dark me-2">Login</a>
+                <a href="#" class="btn btn-dark">Sign up</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Customer Section -->
+<section>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Items</h2>
+
+        <!-- Customer Search -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card ">
+                    <div class="card-header bg-dark text-white">
+                         Search
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="itemCode" class="form-label">Item Code:</label>
+                                <input type="text" class="form-control" id="itemCode">
+                            </div>
+                            <div class="mb-3">
+                                <label for="itemName" class="form-label">Item Name:</label>
+                                <input type="text" class="form-control" id="itemName">
+                            </div>
+                            <button type="button" class="btn btn-dark">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-end">
+                <button type="button" class="btn btn-dark mb-3">New Item</button>
+                <button type="button" class="btn btn-dark mb-3">View All Items</button>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="mt-3">
+            <button type="button" class="btn btn-dark">Delete</button>
+            <button type="button" class="btn btn-dark">Details</button>
+            <button type="button" class="btn btn-dark">Clear</button>
+        </div>
+
+        <!-- Item List -->
+        <h4 class="mt-4 d-flex justify-content-center ">Item List</h4>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Column Title</th>
+                <th>Column Title</th>
+                <th>Column Title</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            </tr>
+            <tr>
+                <td>Fusce eu lobortis leo, id dapibus felis.</td>
+                <td>Fusce eu lobortis leo, id dapibus felis.</td>
+                <td>Fusce eu lobortis leo, id dapibus felis.</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
