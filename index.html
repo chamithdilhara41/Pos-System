@@ -270,8 +270,8 @@
                                 <label for="customerName" class="form-label">Name:</label>
                                 <input type="text" class="form-control" id="customerName">
                             </div>
-                            <button type="button" class="btn btn-dark">Search</button>
-                            <button type="button" class="btn btn-dark">Delete Customer</button>
+                            <button id="customer-search-btn" type="button" class="btn btn-dark">Search</button>
+                            <button id="customer-delete-btn" type="button" class="btn btn-dark">Delete Customer</button>
                         </form>
                     </div>
                 </div>
@@ -305,7 +305,7 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-dark me-2">Clear</button>
+                            <button id="clear-btn" type="button" class="btn btn-dark me-2">Clear</button>
                             <button id="customer-update-btn" type="button" class="btn btn-dark me-2" data-bs-dismiss="modal">Update</button>
                             <button id="customer-add-btn" type="button" class="btn btn-outline-dark me-2">Add Customer</button>
                         </div>
@@ -350,15 +350,15 @@
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
-                                <label for="customerId" class="form-label">Item Code:</label>
+                                <label for="itemCode" class="form-label">Item Code:</label>
                                 <input type="text" class="form-control" id="itemCode">
                             </div>
                             <div class="mb-3">
-                                <label for="customerName" class="form-label">Item Name:</label>
-                                <input type="text" class="form-control" id="itemName">
+                                <label for="itemNameSearch" class="form-label">Item Name:</label>
+                                <input type="text" class="form-control" id="itemNameSearch">
                             </div>
-                            <button type="button" class="btn btn-dark">Search</button>
-                            <button type="button" class="btn btn-dark">Delete Item</button>
+                            <button id="item-search-btn" type="button" class="btn btn-dark">Search</button>
+                            <button id="item-delete-btn" type="button" class="btn btn-dark">Delete Item</button>
                         </form>
                     </div>
                 </div>
@@ -381,8 +381,8 @@
                                         <input type="text" class="form-control" id="unitPrice" placeholder="Unit Price">
                                     </div>
                                     <div class="col-md-6 mb-3">
-                                        <label for="QTY" class="form-label">QTY</label>
-                                        <input type="text" class="form-control" id="QTY" placeholder="quantity">
+                                        <label for="itemQTY" class="form-label">QTY</label>
+                                        <input type="text" class="form-control" id="itemQTY" placeholder="Quantity">
                                     </div>
                                 </div>
                                 <div class="mb-3">
@@ -392,9 +392,9 @@
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-dark me-2">Clear</button>
-                            <button id="update-item-btn" type="button" class="btn btn-dark me-2" data-bs-dismiss="modal">Update</button>
-                            <button id="add-item-btn" type="button" class="btn btn-outline-dark me-2">Add Item</button>
+                            <button id="item-clear-btn" type="button" class="btn btn-dark me-2">Clear</button>
+                            <button id="item-update-btn" type="button" class="btn btn-dark me-2" data-bs-dismiss="modal">Update</button>
+                            <button id="item-add-btn" type="button" class="btn btn-outline-dark me-2">Add Item</button>
                         </div>
                     </div>
                 </div>
@@ -406,7 +406,7 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Item Id</th>
+                <th>Item Code</th>
                 <th>Item Name</th>
                 <th>Unit Price</th>
                 <th>QTY</th>
@@ -468,7 +468,8 @@
 
 </script>
 <script src="./lib/jquery-3.7.1.min.js"></script>
-<script type="module" src="./controller/customer.js"></script>
+<script type="module" src="controller/customerController.js"></script>
+<script type="module" src="controller/itemController.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
