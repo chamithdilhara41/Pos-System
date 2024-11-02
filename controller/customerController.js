@@ -1,7 +1,7 @@
 import customerModel from "../models/customerModel.js";
+import {customers} from "../db/database.js";
 
 //Customers array
-let customers =[];
 let selected_customer_index;
 
 const loadCustomersTable = () =>{

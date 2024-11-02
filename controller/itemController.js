@@ -1,7 +1,7 @@
 import itemModel from '../models/itemModel.js';
+import {items} from "../db/database.js";
 
 //items array
-let items =[];
 let selected_item_index;
 
 const loadItemsTable = () =>{
@@ -122,6 +122,7 @@ $("#item-search-btn").on("click", function() {
     // If only one customer is found, populate the form fields with their details
     if (matchedItems.length === 1) {
         let item = matchedItems[0];
+        $("#itemCode").val(item.itemCode);
         $("#itemName").val(item.itemName);
         $("#itemNameSearch").val(item.itemName);
         $("#unitPrice").val(item.unitPrice);
