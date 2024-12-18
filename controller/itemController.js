@@ -1,8 +1,12 @@
 import itemModel from '../models/itemModel.js';
-import {items} from "../db/database.js";
+import {customers, items} from "../db/database.js";
 
 //items array
 let selected_item_index;
+
+$("#items-nav").on("click",function () {
+    loadItemsTable();
+});
 
 const loadItemsTable = () =>{
     $("#itemTbody").empty();

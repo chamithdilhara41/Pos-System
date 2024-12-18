@@ -1,8 +1,12 @@
 import customerModel from "../models/customerModel.js";
-import {customers} from "../db/database.js";
+import {customers, orders} from "../db/database.js";
 
 //Customers array
 let selected_customer_index;
+
+$("#customers-nav").on("click", function () {
+    loadCustomersTable();
+});
 
 const loadCustomersTable = () =>{
     $("#customerTbody").empty();

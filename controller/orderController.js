@@ -206,9 +206,62 @@ document.getElementById("cash").addEventListener('input', function (event) {
     $('#balance').val(balance.toFixed(2));
 });
 
+function clear() {
+    // Clear all input fields
+    $("#orderId").val("");
+    $("#itemNameOrder").val("");
+    $("#orderQty").val("");
+    $("#price").val("");
+    $("#qty").val("");
+    $("#customerIdOrder").val("");
+    $("#customerNameOrder").val("");
+    $("#mobileNumberOrder").val("");
+    $("#emailOrder").val("");
+    $("#addressOrder").val("");
+
+    // Reset dropdowns to their default option
+    $("#customerIdOrder").prop("selectedIndex", 0);
+    $("#itemCodeOrder").prop("selectedIndex", 0);
+    $("#mobileNumberOrder").prop("selectedIndex", 0);
+
+    // Clear the order cart table body
+    $("#orderCartTbody").empty();
+
+    // Reset the net total, subtotal, and balance
+    $("#lblTotal").text("0.00");
+    $("#lblSubTotal").text("0.00");
+    $("#balance").val("");
+
+    // Clear the discount and cash input fields
+    $("#discount").val("");
+    $("#cash").val("");
+
+    // Clear the cart array
+    cart = [];
+}
+
+
 $("#purchase").on("click", function () {
-    orders.push(cart);
-    generateOrderId();
+
+    if (cart.length === 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Empty Cart',
+            text: 'Please add items to the cart before purchasing.',
+        });
+        return;
+    }else {
+        Swal.fire({
+            icon: 'success',
+            title: 'Order Placed!',
+            text: 'Your order has been successfully placed.',
+            showConfirmButton: true,
+            confirmButtonText: 'OK',
+        });
+        orders.push(cart);
+        clear();
+        generateOrderId();
+    }
     console.log(cart);
     console.log(orders)
 })
